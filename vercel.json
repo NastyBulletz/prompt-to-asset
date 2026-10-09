@@ -1,0 +1,26 @@
+{
+  "services": {
+    "app": {
+      "root": ".",
+      "runtime": "container"
+    },
+    "mcp-server": {
+      "root": "packages/mcp-server",
+      "runtime": "node"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/mcp",
+      "destination": {
+        "service": "mcp-server"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "app"
+      }
+    }
+  ]
+}
