@@ -6,7 +6,8 @@
     },
     "mcp-server": {
       "root": "packages/mcp-server",
-      "runtime": "node"
+      "runtime": "node",
+      "entrypoint": "dist/index.js"
     }
   },
   "rewrites": [
